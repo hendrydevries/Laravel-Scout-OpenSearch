@@ -15,11 +15,11 @@ This package provides an [OpenSearch](https://opensearch.org/) engine for [Larav
 ## Installation
 You can include this package via Composer:
 
-`composer require "cloudmediasolutions/laravel-scout-opensearch"`
+`composer require "hendrydevries/laravel-scout-opensearch"`
 
 Add / set environment variables (in .env):
 
-`SCOUT_DRIVER=CloudMediaSolutions\LaravelScoutOpenSearch\Engines\OpenSearchEngine`
+`SCOUT_DRIVER=Hendrydevries\LaravelScoutOpenSearch\Engines\OpenSearchEngine`
 
 Add your OpenSearch host(s): (You can seperate multiple hosts with a comma)
 

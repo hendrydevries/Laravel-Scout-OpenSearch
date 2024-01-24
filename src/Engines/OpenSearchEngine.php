@@ -1,9 +1,9 @@
 <?php
 
-namespace CloudMediaSolutions\LaravelScoutOpenSearch\Engines;
+namespace Hendrydevries\LaravelScoutOpenSearch\Engines;
 
-use CloudMediaSolutions\LaravelScoutOpenSearch\Paginator\ScrollPaginator;
-use CloudMediaSolutions\LaravelScoutOpenSearch\SearchFactory;
+use Hendrydevries\LaravelScoutOpenSearch\Paginator\ScrollPaginator;
+use Hendrydevries\LaravelScoutOpenSearch\SearchFactory;
 use Illuminate\Pagination\Cursor;
 use Illuminate\Pagination\CursorPaginator;
 use Illuminate\Pagination\Paginator;

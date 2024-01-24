@@ -1,8 +1,8 @@
 <?php
 
-namespace CloudMediaSolutions\LaravelScoutOpenSearch\Providers;
+namespace Hendrydevries\LaravelScoutOpenSearch\Providers;
 
-use CloudMediaSolutions\LaravelScoutOpenSearch\Engines\OpenSearchEngine;
+use Hendrydevries\LaravelScoutOpenSearch\Engines\OpenSearchEngine;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Pagination\CursorPaginator;
 use Illuminate\Support\ServiceProvider;

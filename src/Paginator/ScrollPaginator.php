@@ -1,6 +1,6 @@
 <?php
 
-namespace CloudMediaSolutions\LaravelScoutOpenSearch\Paginator;
+namespace Hendrydevries\LaravelScoutOpenSearch\Paginator;
 
 use Illuminate\Pagination\Cursor;
 use Illuminate\Pagination\CursorPaginator;
@@ -9,6 +9,7 @@ final class ScrollPaginator extends CursorPaginator
 {
     private ?Cursor $nextCursor = null;
     private ?Cursor $previousCursor = null;
+    private int $total;
 
     /**
      * Create a new paginator instance.
@@ -28,6 +29,8 @@ final class ScrollPaginator extends CursorPaginator
         $options = []
     ) {
         parent::__construct($items, $perPage, $cursor, $options);
+
+        $this->setTotal($response['hits']['total']['value'] ?? 0);
 
         $this->initCursors(
             array_slice($response['hits']['hits'], 0, $perPage)
@@ -85,5 +88,16 @@ final class ScrollPaginator extends CursorPaginator
     public function nextCursor()
     {
         return $this->nextCursor;
+    }
+
+    public function setTotal(int $total): int
+    {
+        $this->total = $total;
+        return $this->total;
+    }
+
+    public function getTotal(): int
+    {
+        return $this->total;
     }
 }

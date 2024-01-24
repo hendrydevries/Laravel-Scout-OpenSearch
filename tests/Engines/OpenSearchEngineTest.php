@@ -2,8 +2,8 @@
 
 namespace Tests\Engines;
 
-use CloudMediaSolutions\LaravelScoutOpenSearch\Engines\OpenSearchEngine;
-use CloudMediaSolutions\LaravelScoutOpenSearch\Providers\OpenSearchServiceProvider;
+use Hendrydevries\LaravelScoutOpenSearch\Engines\OpenSearchEngine;
+use Hendrydevries\LaravelScoutOpenSearch\Providers\OpenSearchServiceProvider;
 use Illuminate\Pagination\Cursor;
 use Illuminate\Support\Collection;
 use Laravel\Scout\Builder;

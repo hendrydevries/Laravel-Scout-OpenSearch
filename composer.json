@@ -1,5 +1,5 @@
 {
-    "name": "cloudmediasolutions/laravel-scout-opensearch",
+    "name": "hendrydevries/laravel-scout-opensearch",
     "description": "OpenSearch engine for Laravel Scout",
     "keywords": [
         "laravel",
@@ -25,11 +25,15 @@
         {
             "name": "Daniël van der Tang",
             "email": "daniel@cloudmedia.solutions"
+        },
+        {
+            "name": "Hendry de Vries",
+            "email": "info@hendrydevries.nl"
         }
     ],
     "autoload": {
         "psr-4": {
-            "CloudMediaSolutions\\LaravelScoutOpenSearch\\": "src"
+            "Hendrydevries\\LaravelScoutOpenSearch\\": "src"
         }
     },
     "autoload-dev": {
@@ -40,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "CloudMediaSolutions\\LaravelScoutOpenSearch\\Providers\\OpenSearchServiceProvider"
+                "Hendrydevries\\LaravelScoutOpenSearch\\Providers\\OpenSearchServiceProvider"
             ]
         }
     }

@@ -1,6 +1,6 @@
 <?php
 
-namespace CloudMediaSolutions\LaravelScoutOpenSearch;
+namespace Hendrydevries\LaravelScoutOpenSearch;
 
 use Illuminate\Pagination\Cursor;
 use Laravel\Scout\Builder;
