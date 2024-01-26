@@ -282,7 +282,15 @@ class OpenSearchEngine extends Engine
             'parameters' => $cols
         ];
 
-        return new ScrollPaginator($items, $perPage, $response, $cursor, $options);
+        $scrollPaginator = new ScrollPaginator($items, $perPage, $response, $cursor, $options);
+
+        if ($response['aggregations'] ?? null) {
+            $scrollPaginator->setAggregations(array_map(function ($aggregation) {
+                return $aggregation['buckets'];
+            }, $response['aggregations']));
+        }
+
+        return $scrollPaginator;
     }
 
     private function resolveCursor($cursor, $cursorName): ?Cursor

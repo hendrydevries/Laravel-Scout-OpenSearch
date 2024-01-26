@@ -10,6 +10,7 @@ final class ScrollPaginator extends CursorPaginator
     private ?Cursor $nextCursor = null;
     private ?Cursor $previousCursor = null;
     private int $total;
+    private array $aggregations;
 
     /**
      * Create a new paginator instance.
@@ -99,5 +100,27 @@ final class ScrollPaginator extends CursorPaginator
     public function getTotal(): int
     {
         return $this->total;
+    }
+
+    public function setAggregations(array $aggregations): array
+    {
+        $this->aggregations = $aggregations;
+        return $this->aggregations;
+    }
+
+    public function addAggregation(array $aggregation): array
+    {
+        $this->aggregations[] = $aggregation;
+        return $this->aggregations;
+    }
+
+    public function getAggregations(): array
+    {
+        return $this->aggregations;
+    }
+
+    public function getAggregation(string $name): ?array
+    {
+        return $this->aggregations[$name] ?? null;
     }
 }
